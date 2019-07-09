@@ -1,9 +1,10 @@
+import pytest
 from pages.product_page import ProductPage
-import time
 
 
-def test_guest_can_add_product_to_cart(browser):
-    link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
+@pytest.mark.parametrize('link', (str(i) for i in range(10)))
+def test_guest_can_add_product_to_cart(browser, link):
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer" + link
     page = ProductPage(browser, link)
     page.open()
     page.click_to_basket_button()
