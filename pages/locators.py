@@ -16,3 +16,4 @@ class ProductPageLocators(object):
     PRODUCT_PRICE = (By.CSS_SELECTOR, "#content_inner .price_color")
     BASKET_NAME = (By.CSS_SELECTOR, "#messages > .alert-safe:nth-child(1) strong")
     BASKET_PRICE = (By.CSS_SELECTOR, "#messages > .alert-safe:nth-child(3) strong")
+

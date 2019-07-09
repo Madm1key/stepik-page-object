@@ -17,3 +17,9 @@ class ProductPage(BasePage):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE)
         basket_price = self.browser.find_element(*ProductPageLocators.BASKET_PRICE)
         assert basket_price.text == product_price.text, "Добавленная сумма не соответствует исходной"
+
+    def not_should_be_succes_message_elem_present(self):
+        assert self.is_not_element_present(*ProductPageLocators.BASKET_NAME), "Инфомарция о товаре отображается"
+
+    def not_should_be_succes_message_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.BASKET_NAME), "Информация о товаре не исчезла"
