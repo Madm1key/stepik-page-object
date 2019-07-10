@@ -6,7 +6,7 @@ from pages.login_page import LoginPage
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer"
 
 
-@pytest.mark.webtest
+@pytest.mark.need_review
 class TestUserAddToCartFromProductPage(object):
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
