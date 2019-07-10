@@ -5,6 +5,10 @@ class BaseLocators(object):
     BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini a")
 
 
+class BasePageLocators(object):
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+
+
 class MainPageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
@@ -12,6 +16,10 @@ class MainPageLocators(object):
 class LoginPageLocators(object):
     LOGIN_FORM = (By.CLASS_NAME, "login_form")
     REGISTER_FORM = (By.CLASS_NAME, "register_form")
+    E_MAIL = (By.ID, 'id_registration-email')
+    PWD = (By.ID, 'id_registration-password1')
+    RE_PWD = (By.ID, 'id_registration-password2')
+    REG_BUTTON = (By.CSS_SELECTOR, '#register_form button')
 
 
 class ProductPageLocators(object):
