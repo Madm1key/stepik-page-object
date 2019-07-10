@@ -1,6 +1,10 @@
 from selenium.webdriver.common.by import By
 
 
+class BaseLocators(object):
+    BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini a")
+
+
 class MainPageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
@@ -17,3 +21,7 @@ class ProductPageLocators(object):
     BASKET_NAME = (By.CSS_SELECTOR, "#messages > .alert-safe:nth-child(1) strong")
     BASKET_PRICE = (By.CSS_SELECTOR, "#messages > .alert-safe:nth-child(3) strong")
 
+
+class CardPageLocators(object):
+    PRODUCT_TEXT = (By.CSS_SELECTOR, "#content_inner .basket-title  h2")
+    NOT_PRODUCT_TEXT = (By.CSS_SELECTOR, "#content_inner p")

@@ -1,5 +1,7 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
+from .locators import BaseLocators
+from .card_page import CardPage
 
 
 class ProductPage(BasePage):
@@ -23,3 +25,8 @@ class ProductPage(BasePage):
 
     def not_should_be_succes_message_is_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.BASKET_NAME), "Информация о товаре не исчезла"
+
+    def go_to_card_page(self):
+        card_link = self.browser.find_element(*BaseLocators.BASKET_LINK)
+        card_link.click()
+        return CardPage(browser=self.browser, url=self.browser.current_url)
